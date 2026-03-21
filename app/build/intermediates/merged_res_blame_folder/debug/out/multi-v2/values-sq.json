@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.courseapp-mergeDebugResources-52:/values-sq/values-sq.xml",
+            "outputFile": "com.courseapp-mergeDebugResources-51:/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/res/values-sq/values-sq.xml",

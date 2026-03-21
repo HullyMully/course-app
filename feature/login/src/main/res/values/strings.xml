@@ -6,11 +6,12 @@
     <string name="label_password">Пароль</string>
     <string name="password_hint">Введите пароль</string>
     <string name="login_button">Вход</string>
-    <string name="register_prefix">Нету аккаунта?</string>
-    <string name="register_action">Регитрация</string>
-    <string name="register_link">Нету аккаунта? Регитрация</string>
+    <string name="register_prefix">Нет аккаунта?</string>
+    <string name="register_action">Регистрация</string>
     <string name="forgot_password">Забыл пароль</string>
     <string name="email_error">Неверный формат email (example@mail.com)</string>
+    <string name="empty_email_error">Введите email</string>
+    <string name="empty_password_error">Введите пароль</string>
     <string name="feature_unavailable">Функция пока недоступна</string>
 
     <string name="register_title">Регистрация</string>
@@ -20,4 +21,5 @@
     <string name="login_prefix">Уже есть аккаунт?</string>
     <string name="login_action">Войти</string>
     <string name="passwords_mismatch">Пароли не совпадают</string>
+    <string name="empty_repeat_password_error">Повторите пароль</string>
 </resources>

@@ -1,22 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Тысячи курсов</string>
-    <string name="login_title">Вход</string>
-    <string name="email_hint">Email</string>
-    <string name="password_hint">Пароль</string>
-    <string name="login_button">Вход</string>
-    <string name="register_link">Нет аккаунта? Регистрация</string>
-    <string name="forgot_password">Забыли пароль?</string>
     <string name="home">Главная</string>
     <string name="favorites">Избранное</string>
     <string name="account">Аккаунт</string>
-    <string name="search_placeholder">Search courses…</string>
-    <string name="sort_by_date">По дате добавления</string>
-    <string name="more_details">Подробнее</string>
-    <string name="profile">Профиль</string>
-    <string name="support">Написать в поддержку</string>
-    <string name="settings">Настройки</string>
-    <string name="logout">Выйти из аккаунта</string>
     <string name="onboarding_title">Тысячи курсов\nв одном месте</string>
     <string name="onboarding_continue">Продолжить</string>
 </resources>

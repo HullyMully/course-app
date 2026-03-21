@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.courseapp-mergeDebugResources-52:/values-pt/values-pt.xml",
+            "outputFile": "com.courseapp-mergeDebugResources-51:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/Users/hullymully/.gradle/caches/8.13/transforms/f3498619ad11820de6c60f517416ffa9/transformed/core-1.12.0/res/values-pt/values-pt.xml",

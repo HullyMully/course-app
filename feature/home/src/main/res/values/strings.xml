@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="search_placeholder">Search courses…</string>
+    <string name="search_placeholder">Поиск курсов…</string>
     <string name="sort_by_date">По дате добавления</string>
     <string name="more_details">Подробнее →</string>
     <string name="price_format">%s ₽</string>
@@ -9,4 +9,8 @@
     <string name="start_course">Начать курс</string>
     <string name="go_to_platform">Перейти на платформу</string>
     <string name="about_course">О курсе</string>
+    <string name="back">Назад</string>
+    <string name="filter">Фильтр</string>
+    <string name="favorite">Избранное</string>
+    <string name="feature_unavailable">Функция пока недоступна</string>
 </resources>

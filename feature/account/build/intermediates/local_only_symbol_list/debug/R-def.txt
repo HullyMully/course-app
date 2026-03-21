@@ -2,9 +2,7 @@ R_DEF: Internal format may change without notice
 local
 drawable bg_green_dot
 drawable bg_progress_green
-drawable bg_rating_badge
 drawable ic_chevron_right
-drawable ic_star_green
 id courseImage
 id courseTitle
 id coursesRecycler

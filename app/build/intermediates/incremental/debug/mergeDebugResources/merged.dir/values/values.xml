@@ -1993,6 +1993,7 @@
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="author_default">Merion Academy</string>
     <string name="author_label">Автор</string>
+    <string name="back">Назад</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
     <string description="A description of an accessibility action to expand the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_expand">Expand the bottom sheet</string>
@@ -2012,7 +2013,10 @@
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="dest_title">destination title</string>
     <string name="email_error">Неверный формат email (example@mail.com)</string>
-    <string name="email_hint">Email</string>
+    <string name="email_hint">example@gmail.com</string>
+    <string name="empty_email_error">Введите email</string>
+    <string name="empty_password_error">Введите пароль</string>
+    <string name="empty_repeat_password_error">Повторите пароль</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
@@ -2020,9 +2024,11 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
+    <string name="favorite">Избранное</string>
     <string name="favorites">Избранное</string>
     <string name="feature_unavailable">Функция пока недоступна</string>
-    <string name="forgot_password">Забыли пароль?</string>
+    <string name="filter">Фильтр</string>
+    <string name="forgot_password">Забыл пароль</string>
     <string name="go_to_platform">Перейти на платформу</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string name="home">Главная</string>
@@ -2076,7 +2082,7 @@
     <string description="Suffix for time in 12-hour standard, after noon. [CHAR_LIMIT=2]" name="material_timepicker_pm">PM</string>
     <string description="Title for the dialog with a time picker. [CHAR_LIMIT=32]" name="material_timepicker_select_time">Select time</string>
     <string name="material_timepicker_text_input_mode_description">Switch to text input mode for the time input.</string>
-    <string name="more_details">Подробнее</string>
+    <string name="more_details">Подробнее →</string>
     <string description="Content description for new notification (no number count) [CHAR_LIMIT=NONE]" name="mtrl_badge_numberless_content_description">New notification</string>
     <string name="mtrl_checkbox_button_icon_path_checked" translatable="false">M14,18.2 11.4,15.6 10,17 14,21 22,13 20.6,11.6z</string>
     <string name="mtrl_checkbox_button_icon_path_group_name" translatable="false">icon</string>
@@ -2149,7 +2155,7 @@
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
     <string name="onboarding_continue">Продолжить</string>
     <string name="onboarding_title">Тысячи курсов\nв одном месте</string>
-    <string name="password_hint">Пароль</string>
+    <string name="password_hint">Введите пароль</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="passwords_mismatch">Пароли не совпадают</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -2158,14 +2164,13 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="price_format">%s ₽</string>
     <string name="profile">Профиль</string>
-    <string name="register_action">Регитрация</string>
+    <string name="register_action">Регистрация</string>
     <string name="register_button">Регистрация</string>
-    <string name="register_link">Нет аккаунта? Регистрация</string>
-    <string name="register_prefix">Нету аккаунта?</string>
+    <string name="register_prefix">Нет аккаунта?</string>
     <string name="register_title">Регистрация</string>
     <string name="repeat_password_hint">Введите пароль ещё раз</string>
     <string name="search_menu_title">Search</string>
-    <string name="search_placeholder">Search courses…</string>
+    <string name="search_placeholder">Поиск курсов…</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
@@ -11347,107 +11352,6 @@
     
     <attr format="boolean" name="behavior_autoShrink"/>
   </declare-styleable>
-    <declare-styleable name="FlexboxLayout">
-        <attr name="flexDirection">
-            <enum name="row" value="0"/>
-            <enum name="row_reverse" value="1"/>
-            <enum name="column" value="2"/>
-            <enum name="column_reverse" value="3"/>
-        </attr>
-
-        <attr name="flexWrap">
-            <enum name="nowrap" value="0"/>
-            <enum name="wrap" value="1"/>
-            <enum name="wrap_reverse" value="2"/>
-        </attr>
-
-        
-
-        <attr name="justifyContent">
-            <enum name="flex_start" value="0"/>
-            <enum name="flex_end" value="1"/>
-            <enum name="center" value="2"/>
-            <enum name="space_between" value="3"/>
-            <enum name="space_around" value="4"/>
-            <enum name="space_evenly" value="5"/>
-        </attr>
-
-        <attr name="alignItems">
-            <enum name="flex_start" value="0"/>
-            <enum name="flex_end" value="1"/>
-            <enum name="center" value="2"/>
-            <enum name="baseline" value="3"/>
-            <enum name="stretch" value="4"/>
-        </attr>
-
-        <attr name="alignContent">
-            <enum name="flex_start" value="0"/>
-            <enum name="flex_end" value="1"/>
-            <enum name="center" value="2"/>
-            <enum name="space_between" value="3"/>
-            <enum name="space_around" value="4"/>
-            <enum name="stretch" value="5"/>
-        </attr>
-
-        <attr format="reference" name="dividerDrawable"/>
-        <attr format="reference" name="dividerDrawableHorizontal"/>
-        <attr format="reference" name="dividerDrawableVertical"/>
-
-        <attr name="showDivider">
-            <flag name="none" value="0"/>
-            <flag name="beginning" value="1"/>
-            <flag name="middle" value="2"/>
-            <flag name="end" value="4"/>
-        </attr>
-        <attr name="showDividerHorizontal">
-            <flag name="none" value="0"/>
-            <flag name="beginning" value="1"/>
-            <flag name="middle" value="2"/>
-            <flag name="end" value="4"/>
-        </attr>
-        <attr name="showDividerVertical">
-            <flag name="none" value="0"/>
-            <flag name="beginning" value="1"/>
-            <flag name="middle" value="2"/>
-            <flag name="end" value="4"/>
-        </attr>
-
-        
-        <attr format="integer" name="maxLine"/>
-
-    </declare-styleable>
-    <declare-styleable name="FlexboxLayout_Layout">
-        <attr format="integer" name="layout_order"/>
-
-        
-        <attr format="float" name="layout_flexGrow"/>
-
-        
-        <attr format="float" name="layout_flexShrink"/>
-
-        
-        <attr format="fraction" name="layout_flexBasisPercent"/>
-
-        
-
-        <attr name="layout_alignSelf">
-            <enum name="auto" value="-1"/>
-            <!-- The values below need to match the values of alignItems -->
-            <enum name="flex_start" value="0"/>
-            <enum name="flex_end" value="1"/>
-            <enum name="center" value="2"/>
-            <enum name="baseline" value="3"/>
-            <enum name="stretch" value="4"/>
-        </attr>
-
-        <attr format="dimension" name="layout_minWidth"/>
-        <attr format="dimension" name="layout_minHeight"/>
-        <attr format="dimension" name="layout_maxWidth"/>
-        <attr format="dimension" name="layout_maxHeight"/>
-
-        
-        <attr format="boolean" name="layout_wrapBefore"/>
-    </declare-styleable>
     <declare-styleable name="FloatingActionButton">
     
     <attr name="android:enabled"/>

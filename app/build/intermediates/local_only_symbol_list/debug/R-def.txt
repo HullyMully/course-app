@@ -1,10 +1,5 @@
 R_DEF: Internal format may change without notice
 local
-color background_dark
-color green_accent
-color surface_dark
-color text_primary
-color text_secondary
 drawable bg_chip_dark
 drawable bg_chip_green
 drawable bottom_nav_color
@@ -33,21 +28,8 @@ mipmap ic_launcher_round
 navigation nav_graph
 string account
 string app_name
-string email_hint
 string favorites
-string forgot_password
 string home
-string login_button
-string login_title
-string logout
-string more_details
 string onboarding_continue
 string onboarding_title
-string password_hint
-string profile
-string register_link
-string search_placeholder
-string settings
-string sort_by_date
-string support
 style Theme.CourseApp

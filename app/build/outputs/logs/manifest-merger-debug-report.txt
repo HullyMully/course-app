@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-40:12
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-40:12
+ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
 MERGED from [:feature:home] /Users/hullymully/Documents/development/Projects/course-app/feature/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:feature:favorites] /Users/hullymully/Documents/development/Projects/course-app/feature/favorites/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:feature:account] /Users/hullymully/Documents/development/Projects/course-app/feature/account/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
@@ -21,8 +21,8 @@ MERGED from [androidx.navigation:navigation-fragment-ktx:2.7.6] /Users/hullymull
 MERGED from [androidx.navigation:navigation-ui-ktx:2.7.6] /Users/hullymully/.gradle/caches/8.13/transforms/f287f969af84d41ab71b130638d3b17d/transformed/navigation-ui-ktx-2.7.6/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.7.6] /Users/hullymully/.gradle/caches/8.13/transforms/3b073252f1cceff84d5f07f57c0925ab/transformed/navigation-ui-2.7.6/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [io.insert-koin:koin-android:3.5.3] /Users/hullymully/.gradle/caches/8.13/transforms/89fc4b516188683f655e1944106bf598/transformed/koin-android-3.5.3/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/58327b3b5064804e28e62cfac4710181/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/45782928471e6f6c49edb694386be746/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:glide:4.16.0] /Users/hullymully/.gradle/caches/8.13/transforms/de667b63b989c141034ccf79d2aa41e8/transformed/glide-4.16.0/AndroidManifest.xml:2:1-9:12
@@ -31,12 +31,12 @@ MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/hullymully/.gradle
 MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/hullymully/.gradle/caches/8.13/transforms/284aeb51987c0c59a832fdac16792421/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.fragment:fragment:1.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/1fbe71502c3c10ab95aecaaa2bd68d23/transformed/fragment-1.6.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/bbaa907e01ef990f127b75e1dcab0303/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e1ab11709449e8f71c5259722123282d/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e6bafa1b17505a2dae25585dafbecdfa/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/8f809d11c9dba2737c6c5aa39a0ec4d2/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
 MERGED from [androidx.activity:activity-ktx:1.8.0] /Users/hullymully/.gradle/caches/8.13/transforms/776517af400d013f35f38b38f532e51c/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.activity:activity:1.8.0] /Users/hullymully/.gradle/caches/8.13/transforms/02bfd6e74ed7e56c021c319a38b06cd3/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hullymully/.gradle/caches/8.13/transforms/d0144fd36a124d81d8159678852da6d9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/8022c6b9e57e75d302f71a22c24d2ef6/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/cc683d1f24ea93af8d59d3a539d655d8/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/c5f3e75f93220ee81ee0b248e0b905f5/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/70b30f8c5ba490389acd74c517d3b7ab/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
@@ -61,7 +61,6 @@ MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.2] /Users/hullymully/.
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/be3d13142b24094ef71a4c9025349dcd/transformed/lifecycle-viewmodel-ktx-2.6.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/583ab663b10b70777fcc5862adae8aa3/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core-ktx:1.12.0] /Users/hullymully/.gradle/caches/8.13/transforms/e10fd593a976b94cc0bfad29a2c0f024/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
-MERGED from [com.google.android.flexbox:flexbox:3.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/fa94cdf6fdd0554b8b10b6743c7e9958/transformed/flexbox-3.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/23cd8f050b52fec802e433226ee0bc55/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.room:room-ktx:2.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/3861ef9bb5575a3f51516412abcf43af/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/hullymully/.gradle/caches/8.13/transforms/ddf430b5e2cf3a462df3778e3fc940dc/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
@@ -93,14 +92,14 @@ ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/m
 	android:name
 		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:4:22-64
 application
-ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:6:5-39:19
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:6:5-39:19
+ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:6:5-35:19
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:6:5-35:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [io.insert-koin:koin-android:3.5.3] /Users/hullymully/.gradle/caches/8.13/transforms/89fc4b516188683f655e1944106bf598/transformed/koin-android-3.5.3/AndroidManifest.xml:9:5-20
 MERGED from [io.insert-koin:koin-android:3.5.3] /Users/hullymully/.gradle/caches/8.13/transforms/89fc4b516188683f655e1944106bf598/transformed/koin-android-3.5.3/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
 MERGED from [com.hannesdorfmann:adapterdelegates4:4.3.2] /Users/hullymully/.gradle/caches/8.13/transforms/39537d6bc67c362d8da91f8d15e9f645/transformed/adapterdelegates4-4.3.2/AndroidManifest.xml:9:5-20
 MERGED from [com.hannesdorfmann:adapterdelegates4:4.3.2] /Users/hullymully/.gradle/caches/8.13/transforms/39537d6bc67c362d8da91f8d15e9f645/transformed/adapterdelegates4-4.3.2/AndroidManifest.xml:9:5-20
 MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/8f809d11c9dba2737c6c5aa39a0ec4d2/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
@@ -179,14 +178,6 @@ ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/m
 		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:34:13-51
 	android:name
 		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:32:13-64
-activity#com.courseapp.home.CourseDetailActivity
-ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:35:9-38:54
-	android:exported
-		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:37:13-37
-	android:theme
-		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:38:13-51
-	android:name
-		ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:36:13-67
 uses-sdk
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml
@@ -225,10 +216,10 @@ MERGED from [androidx.navigation:navigation-ui:2.7.6] /Users/hullymully/.gradle/
 MERGED from [androidx.navigation:navigation-ui:2.7.6] /Users/hullymully/.gradle/caches/8.13/transforms/3b073252f1cceff84d5f07f57c0925ab/transformed/navigation-ui-2.7.6/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.11.0] /Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.11.0] /Users/hullymully/.gradle/caches/8.13/transforms/93317758d9f7103f6426f83e73680416/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [io.insert-koin:koin-android:3.5.3] /Users/hullymully/.gradle/caches/8.13/transforms/89fc4b516188683f655e1944106bf598/transformed/koin-android-3.5.3/AndroidManifest.xml:5:5-7:41
 MERGED from [io.insert-koin:koin-android:3.5.3] /Users/hullymully/.gradle/caches/8.13/transforms/89fc4b516188683f655e1944106bf598/transformed/koin-android-3.5.3/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/hullymully/.gradle/caches/8.13/transforms/fbf509a2ca8012b2c4ffa2f8b6742ba3/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/58327b3b5064804e28e62cfac4710181/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/58327b3b5064804e28e62cfac4710181/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/45782928471e6f6c49edb694386be746/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
@@ -245,8 +236,6 @@ MERGED from [androidx.fragment:fragment:1.6.2] /Users/hullymully/.gradle/caches/
 MERGED from [androidx.fragment:fragment:1.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/1fbe71502c3c10ab95aecaaa2bd68d23/transformed/fragment-1.6.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/bbaa907e01ef990f127b75e1dcab0303/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment-ktx:1.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/bbaa907e01ef990f127b75e1dcab0303/transformed/fragment-ktx-1.6.2/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e1ab11709449e8f71c5259722123282d/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e1ab11709449e8f71c5259722123282d/transformed/coordinatorlayout-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e6bafa1b17505a2dae25585dafbecdfa/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/e6bafa1b17505a2dae25585dafbecdfa/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/8f809d11c9dba2737c6c5aa39a0ec4d2/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
@@ -257,6 +246,8 @@ MERGED from [androidx.activity:activity:1.8.0] /Users/hullymully/.gradle/caches/
 MERGED from [androidx.activity:activity:1.8.0] /Users/hullymully/.gradle/caches/8.13/transforms/02bfd6e74ed7e56c021c319a38b06cd3/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hullymully/.gradle/caches/8.13/transforms/d0144fd36a124d81d8159678852da6d9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/hullymully/.gradle/caches/8.13/transforms/d0144fd36a124d81d8159678852da6d9/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/8022c6b9e57e75d302f71a22c24d2ef6/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/8022c6b9e57e75d302f71a22c24d2ef6/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/cc683d1f24ea93af8d59d3a539d655d8/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/cc683d1f24ea93af8d59d3a539d655d8/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/hullymully/.gradle/caches/8.13/transforms/c5f3e75f93220ee81ee0b248e0b905f5/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -305,8 +296,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/hul
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /Users/hullymully/.gradle/caches/8.13/transforms/583ab663b10b70777fcc5862adae8aa3/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core-ktx:1.12.0] /Users/hullymully/.gradle/caches/8.13/transforms/e10fd593a976b94cc0bfad29a2c0f024/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
 MERGED from [androidx.core:core-ktx:1.12.0] /Users/hullymully/.gradle/caches/8.13/transforms/e10fd593a976b94cc0bfad29a2c0f024/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.flexbox:flexbox:3.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/fa94cdf6fdd0554b8b10b6743c7e9958/transformed/flexbox-3.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.flexbox:flexbox:3.0.0] /Users/hullymully/.gradle/caches/8.13/transforms/fa94cdf6fdd0554b8b10b6743c7e9958/transformed/flexbox-3.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/23cd8f050b52fec802e433226ee0bc55/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.room:room-runtime:2.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/23cd8f050b52fec802e433226ee0bc55/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
 MERGED from [androidx.room:room-ktx:2.6.1] /Users/hullymully/.gradle/caches/8.13/transforms/3861ef9bb5575a3f51516412abcf43af/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44

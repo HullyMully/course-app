@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.courseapp-mergeDebugResources-52:/values-v23/values-v23.xml",
+            "outputFile": "com.courseapp-mergeDebugResources-51:/values-v23/values-v23.xml",
             "map": [
                 {
                     "source": "/Users/hullymully/.gradle/caches/8.13/transforms/532814a2077971c7fbf9878fb333466f/transformed/cardview-1.0.0/res/values-v23/values-v23.xml",

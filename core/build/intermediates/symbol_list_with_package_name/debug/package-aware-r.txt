@@ -4,5 +4,9 @@ color green_accent
 color surface_dark
 color text_primary
 color text_secondary
+drawable bg_rating_badge
+drawable ic_favorite_border
+drawable ic_favorite_filled
 drawable ic_ok
+drawable ic_star_green
 drawable ic_vk

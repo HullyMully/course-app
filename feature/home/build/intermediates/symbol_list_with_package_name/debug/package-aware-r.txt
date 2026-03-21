@@ -1,18 +1,12 @@
 com.courseapp.home
 drawable author_merion
-drawable bg_author_avatar
-drawable bg_rating_badge
 drawable course_3d
 drawable course_java
 drawable course_x
 drawable ic_arrow_back
-drawable ic_author_placeholder
-drawable ic_favorite_border
-drawable ic_favorite_filled
 drawable ic_filter
 drawable ic_search
 drawable ic_sort
-drawable ic_star_green
 id authorAvatar
 id authorName
 id backButton
@@ -34,12 +28,16 @@ id search_card
 id sort_chip
 id startCourseButton
 id title
-layout activity_course_detail
+layout fragment_course_detail
 layout fragment_home
 layout item_course
 string about_course
 string author_default
 string author_label
+string back
+string favorite
+string feature_unavailable
+string filter
 string go_to_platform
 string more_details
 string price_format

@@ -1,8 +1,4 @@
 com.courseapp.favorites
-drawable bg_rating_badge
-drawable ic_favorite_filled
-drawable ic_remove
-drawable ic_star_green
 id date
 id description
 id favorite_button
@@ -15,3 +11,4 @@ id title
 layout fragment_favorites
 layout item_favorite
 string favorites
+string more_details

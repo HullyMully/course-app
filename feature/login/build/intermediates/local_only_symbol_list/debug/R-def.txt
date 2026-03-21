@@ -17,6 +17,9 @@ layout activity_login
 layout activity_register
 string email_error
 string email_hint
+string empty_email_error
+string empty_password_error
+string empty_repeat_password_error
 string feature_unavailable
 string forgot_password
 string label_email
@@ -30,7 +33,6 @@ string password_hint
 string passwords_mismatch
 string register_action
 string register_button
-string register_link
 string register_prefix
 string register_title
 string repeat_password_hint

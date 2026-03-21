@@ -15,6 +15,9 @@ int layout activity_login 0x0
 int layout activity_register 0x0
 int string email_error 0x0
 int string email_hint 0x0
+int string empty_email_error 0x0
+int string empty_password_error 0x0
+int string empty_repeat_password_error 0x0
 int string feature_unavailable 0x0
 int string forgot_password 0x0
 int string label_email 0x0
@@ -28,7 +31,6 @@ int string password_hint 0x0
 int string passwords_mismatch 0x0
 int string register_action 0x0
 int string register_button 0x0
-int string register_link 0x0
 int string register_prefix 0x0
 int string register_title 0x0
 int string repeat_password_hint 0x0

@@ -133,8 +133,6 @@ attr alertDialogButtonGroupStyle
 attr alertDialogCenterButtons
 attr alertDialogStyle
 attr alertDialogTheme
-attr alignContent
-attr alignItems
 attr allowStacking
 attr alpha
 attr alphabeticModifiers
@@ -479,9 +477,6 @@ attr dialogTheme
 attr displayOptions
 attr divider
 attr dividerColor
-attr dividerDrawable
-attr dividerDrawableHorizontal
-attr dividerDrawableVertical
 attr dividerHorizontal
 attr dividerInsetEnd
 attr dividerInsetStart
@@ -577,8 +572,6 @@ attr fastScrollVerticalTrackDrawable
 attr finishPrimaryWithSecondary
 attr finishSecondaryWithPrimary
 attr firstBaselineToTopHeight
-attr flexDirection
-attr flexWrap
 attr floatingActionButtonLargePrimaryStyle
 attr floatingActionButtonLargeSecondaryStyle
 attr floatingActionButtonLargeStyle
@@ -715,7 +708,6 @@ attr itemTextAppearanceActiveBoldEnabled
 attr itemTextAppearanceInactive
 attr itemTextColor
 attr itemVerticalPadding
-attr justifyContent
 attr keyPositionType
 attr keyboardIcon
 attr keylines
@@ -731,7 +723,6 @@ attr layout
 attr layoutDescription
 attr layoutDuringTransition
 attr layoutManager
-attr layout_alignSelf
 attr layout_anchor
 attr layout_anchorGravity
 attr layout_behavior
@@ -786,9 +777,6 @@ attr layout_constraintWidth_percent
 attr layout_dodgeInsetEdges
 attr layout_editor_absoluteX
 attr layout_editor_absoluteY
-attr layout_flexBasisPercent
-attr layout_flexGrow
-attr layout_flexShrink
 attr layout_goneMarginBaseline
 attr layout_goneMarginBottom
 attr layout_goneMarginEnd
@@ -799,16 +787,10 @@ attr layout_goneMarginTop
 attr layout_insetEdge
 attr layout_keyline
 attr layout_marginBaseline
-attr layout_maxHeight
-attr layout_maxWidth
-attr layout_minHeight
-attr layout_minWidth
 attr layout_optimizationLevel
-attr layout_order
 attr layout_scrollEffect
 attr layout_scrollFlags
 attr layout_scrollInterpolator
-attr layout_wrapBefore
 attr layout_wrapBehaviorInParent
 attr liftOnScroll
 attr liftOnScrollColor
@@ -893,7 +875,6 @@ attr maxButtonHeight
 attr maxCharacterCount
 attr maxHeight
 attr maxImageSize
-attr maxLine
 attr maxLines
 attr maxNumber
 attr maxVelocity
@@ -1094,9 +1075,6 @@ attr shouldRemoveExpandedCorners
 attr showAnimationBehavior
 attr showAsAction
 attr showDelay
-attr showDivider
-attr showDividerHorizontal
-attr showDividerVertical
 attr showDividers
 attr showMotionSpec
 attr showPaths
@@ -3042,7 +3020,6 @@ drawable abc_vector_test
 drawable author_merion
 drawable avd_hide_password
 drawable avd_show_password
-drawable bg_author_avatar
 drawable bg_chip_dark
 drawable bg_chip_green
 drawable bg_green_dot
@@ -3067,7 +3044,6 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_arrow_back
 drawable ic_arrow_back_black_24
-drawable ic_author_placeholder
 drawable ic_call_answer
 drawable ic_call_answer_low
 drawable ic_call_answer_video
@@ -3094,7 +3070,6 @@ drawable ic_nav_account
 drawable ic_nav_favorite
 drawable ic_nav_home
 drawable ic_ok
-drawable ic_remove
 drawable ic_search
 drawable ic_search_black_24
 drawable ic_sort
@@ -3306,8 +3281,6 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
-id column
-id column_reverse
 id compress
 id confirm_button
 id constraint
@@ -3394,8 +3367,6 @@ id fitStart
 id fitToContents
 id fitXY
 id fixed
-id flex_end
-id flex_start
 id flip
 id floating
 id forever
@@ -3537,7 +3508,6 @@ id north
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id nowrap
 id off
 id okButton
 id on
@@ -3600,9 +3570,7 @@ id rightToLeft
 id right_icon
 id right_side
 id rounded
-id row
 id row_index_key
-id row_reverse
 id rtl
 id save_non_transition_alpha
 id save_overlay_view
@@ -3647,9 +3615,6 @@ id snap
 id snapMargins
 id sort_chip
 id south
-id space_around
-id space_between
-id space_evenly
 id spacer
 id special_effects_controller_view_tag
 id spline
@@ -3743,7 +3708,6 @@ id withinBounds
 id wrap
 id wrap_content
 id wrap_content_constrained
-id wrap_reverse
 id x_left
 id x_right
 integer abc_config_activityDefaultDur
@@ -3861,7 +3825,6 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
-layout activity_course_detail
 layout activity_login
 layout activity_main
 layout activity_onboarding
@@ -3883,6 +3846,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_account
+layout fragment_course_detail
 layout fragment_favorites
 layout fragment_home
 layout ime_base_split_test_activity
@@ -3990,6 +3954,7 @@ string app_name
 string appbar_scrolling_view_behavior
 string author_default
 string author_label
+string back
 string bottom_sheet_behavior
 string bottomsheet_action_collapse
 string bottomsheet_action_expand
@@ -4010,13 +3975,18 @@ string clear_text_end_icon_content_description
 string dest_title
 string email_error
 string email_hint
+string empty_email_error
+string empty_password_error
+string empty_repeat_password_error
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string favorite
 string favorites
 string feature_unavailable
+string filter
 string forgot_password
 string go_to_platform
 string hide_bottom_view_on_scroll_behavior
@@ -4149,7 +4119,6 @@ string price_format
 string profile
 string register_action
 string register_button
-string register_link
 string register_prefix
 string register_title
 string repeat_password_hint
@@ -5338,8 +5307,6 @@ styleable DrawerArrowToggle arrowHeadLength arrowShaftLength barLength color dra
 styleable DrawerLayout elevation
 styleable ExtendedFloatingActionButton collapsedSize elevation extendMotionSpec extendStrategy hideMotionSpec showMotionSpec shrinkMotionSpec
 styleable ExtendedFloatingActionButton_Behavior_Layout behavior_autoHide behavior_autoShrink
-styleable FlexboxLayout alignContent alignItems dividerDrawable dividerDrawableHorizontal dividerDrawableVertical flexDirection flexWrap justifyContent maxLine showDivider showDividerHorizontal showDividerVertical
-styleable FlexboxLayout_Layout layout_alignSelf layout_flexBasisPercent layout_flexGrow layout_flexShrink layout_maxHeight layout_maxWidth layout_minHeight layout_minWidth layout_order layout_wrapBefore
 styleable FloatingActionButton android_enabled backgroundTint backgroundTintMode borderWidth elevation ensureMinTouchTargetSize fabCustomSize fabSize hideMotionSpec hoveredFocusedTranslationZ maxImageSize pressedTranslationZ rippleColor shapeAppearance shapeAppearanceOverlay showMotionSpec useCompatPadding
 styleable FloatingActionButton_Behavior_Layout behavior_autoHide
 styleable FlowLayout itemSpacing lineSpacing

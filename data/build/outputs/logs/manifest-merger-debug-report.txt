@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml:2:13-83
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml:2:13-83
+ADDED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml:2:13-83
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml:2:13-83
 	package
-		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml
+		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml
 	xmlns:android
-		ADDED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml:2:23-81
+		ADDED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml:2:23-81
 uses-sdk
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml reason: use-sdk injection requested
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml
-INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml reason: use-sdk injection requested
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml
+INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml
 	android:targetSdkVersion
-		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml
+		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml
 	android:minSdkVersion
-		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest8451911330672043545.xml
+		INJECTED from /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest7328040339411787081.xml

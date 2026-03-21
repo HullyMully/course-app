@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.courseapp.core.util.ImageUtils
 import com.courseapp.data.db.FavoriteEntity
 import com.courseapp.favorites.databinding.ItemFavoriteBinding
 
@@ -16,8 +17,8 @@ class FavoritesAdapter(
 ) : ListAdapter<FavoriteEntity, FavoritesAdapter.VH>(Diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val b = ItemFavoriteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return VH(b, onRemove, onCardClick)
+        val binding = ItemFavoriteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return VH(binding, onRemove, onCardClick)
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
@@ -29,6 +30,7 @@ class FavoritesAdapter(
         private val onRemove: (String) -> Unit,
         private val onCardClick: (FavoriteEntity) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
+
         fun bind(item: FavoriteEntity) {
             val ctx = binding.root.context
             binding.title.text = item.title
@@ -37,7 +39,7 @@ class FavoritesAdapter(
             binding.price.text = "${item.price} ₽"
             binding.rating.text = "${item.rate}"
             binding.rating.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                R.drawable.ic_star_green, 0, 0, 0
+                com.courseapp.core.R.drawable.ic_star_green, 0, 0, 0
             )
             binding.rating.compoundDrawablePadding = 6
             binding.date.text = item.publishDate
@@ -48,12 +50,7 @@ class FavoritesAdapter(
             if (!imageUrl.isNullOrBlank()) {
                 Glide.with(binding.image).load(imageUrl).transform(CenterCrop()).into(binding.image)
             } else {
-                val name = when {
-                    item.title.contains("Java", ignoreCase = true) -> "course_java"
-                    item.title.contains("3D", ignoreCase = true) || item.title.contains("дженералист", ignoreCase = true) -> "course_3d"
-                    else -> "course_x"
-                }
-                val resId = ctx.resources.getIdentifier(name, "drawable", ctx.packageName)
+                val resId = ImageUtils.resolveLocalCourseImage(item.title, ctx.resources, ctx.packageName)
                 if (resId != 0) {
                     Glide.with(binding.image).load(resId).transform(CenterCrop()).into(binding.image)
                 } else {

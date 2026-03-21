@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.courseapp.core.util.ImageUtils
 import com.courseapp.data.db.FavoriteEntity
 import com.courseapp.account.databinding.ItemProfileCourseBinding
 
@@ -15,8 +16,8 @@ class ProfileCourseAdapter(
 ) : ListAdapter<FavoriteEntity, ProfileCourseAdapter.VH>(Diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        val b = ItemProfileCourseBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return VH(b, onCardClick)
+        val binding = ItemProfileCourseBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return VH(binding, onCardClick)
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
@@ -31,10 +32,9 @@ class ProfileCourseAdapter(
         fun bind(item: FavoriteEntity) {
             val ctx = binding.root.context
             binding.courseTitle.text = item.title
-
             binding.rating.text = "${item.rate}"
             binding.rating.setCompoundDrawablesRelativeWithIntrinsicBounds(
-                R.drawable.ic_star_green, 0, 0, 0
+                com.courseapp.core.R.drawable.ic_star_green, 0, 0, 0
             )
             binding.rating.compoundDrawablePadding = 6
             binding.date.text = item.publishDate
@@ -53,18 +53,15 @@ class ProfileCourseAdapter(
 
             binding.progressText.text = "$progress%"
             binding.progressBar.progress = progress
-            binding.lessonsCount.text = ctx.getString(R.string.lessons_format, completedLessons, totalLessons)
+            binding.lessonsCount.text = ctx.getString(
+                R.string.lessons_format, completedLessons, totalLessons
+            )
 
             val imageUrl = item.imageUrl
             if (!imageUrl.isNullOrBlank()) {
                 Glide.with(binding.courseImage).load(imageUrl).transform(CenterCrop()).into(binding.courseImage)
             } else {
-                val name = when {
-                    item.title.contains("Java", ignoreCase = true) -> "course_java"
-                    item.title.contains("3D", ignoreCase = true) || item.title.contains("дженералист", ignoreCase = true) -> "course_3d"
-                    else -> "course_x"
-                }
-                val resId = ctx.resources.getIdentifier(name, "drawable", ctx.packageName)
+                val resId = ImageUtils.resolveLocalCourseImage(item.title, ctx.resources, ctx.packageName)
                 if (resId != 0) {
                     Glide.with(binding.courseImage).load(resId).transform(CenterCrop()).into(binding.courseImage)
                 } else {

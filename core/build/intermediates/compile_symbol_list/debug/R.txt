@@ -3,5 +3,9 @@ int color green_accent 0x0
 int color surface_dark 0x0
 int color text_primary 0x0
 int color text_secondary 0x0
+int drawable bg_rating_badge 0x0
+int drawable ic_favorite_border 0x0
+int drawable ic_favorite_filled 0x0
 int drawable ic_ok 0x0
+int drawable ic_star_green 0x0
 int drawable ic_vk 0x0

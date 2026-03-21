@@ -32,9 +32,5 @@
             android:name="com.courseapp.login.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.CourseApp" />
-        <activity
-            android:name="com.courseapp.home.CourseDetailActivity"
-            android:exported="false"
-            android:theme="@style/Theme.CourseApp" />
     </application>
 </manifest>

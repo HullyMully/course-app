@@ -65,7 +65,7 @@
                 android:layout_gravity="top|end"
                 android:layout_margin="8dp"
                 android:background="@android:color/transparent"
-                android:contentDescription="Удалить из избранного"
+                android:contentDescription="@string/favorites"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_favorite_filled" />
         </FrameLayout>
@@ -119,7 +119,7 @@
                     android:id="@+id/more_link"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Подробнее →"
+                    android:text="@string/more_details"
                     android:textColor="@color/green_accent"
                     android:textSize="14sp" />
             </LinearLayout>

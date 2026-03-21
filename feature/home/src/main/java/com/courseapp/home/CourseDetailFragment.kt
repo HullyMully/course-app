@@ -9,25 +9,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
-import com.courseapp.home.databinding.ActivityCourseDetailBinding
+import com.courseapp.home.databinding.FragmentCourseDetailBinding
 
 class CourseDetailFragment : Fragment() {
 
-    private var _binding: ActivityCourseDetailBinding? = null
+    private var _binding: FragmentCourseDetailBinding? = null
     private val binding get() = _binding!!
 
-    companion object {
-        const val ARG_TITLE = "arg_title"
-        const val ARG_DESCRIPTION = "arg_description"
-        const val ARG_PRICE = "arg_price"
-        const val ARG_RATE = "arg_rate"
-        const val ARG_DATE = "arg_date"
-        const val ARG_IMAGE_URL = "arg_image_url"
-        const val ARG_IS_FAVORITE = "arg_is_favorite"
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        _binding = ActivityCourseDetailBinding.inflate(inflater, container, false)
+        _binding = FragmentCourseDetailBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -48,49 +38,60 @@ class CourseDetailFragment : Fragment() {
         binding.priceLabel.text = getString(R.string.price_format, price)
         binding.rating.text = rate
         binding.rating.setCompoundDrawablesRelativeWithIntrinsicBounds(
-            R.drawable.ic_star_green, 0, 0, 0
+            com.courseapp.core.R.drawable.ic_star_green, 0, 0, 0
         )
         binding.rating.compoundDrawablePadding = 4
         binding.date.text = date
 
         binding.favoriteButton.setImageResource(
-            if (isFavorite) R.drawable.ic_favorite_filled else R.drawable.ic_favorite_border
+            if (isFavorite) com.courseapp.core.R.drawable.ic_favorite_filled
+            else com.courseapp.core.R.drawable.ic_favorite_border
         )
 
+        loadCourseImage(title, imageUrl)
+        loadAuthorAvatar()
+
+        binding.backButton.setOnClickListener { findNavController().popBackStack() }
+        binding.startCourseButton.setOnClickListener {
+            Toast.makeText(requireContext(), R.string.feature_unavailable, Toast.LENGTH_SHORT).show()
+        }
+        binding.goToPlatformButton.setOnClickListener {
+            Toast.makeText(requireContext(), R.string.feature_unavailable, Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun loadCourseImage(title: String, imageUrl: String?) {
         if (!imageUrl.isNullOrBlank()) {
             Glide.with(this).load(imageUrl).transform(CenterCrop()).into(binding.courseImage)
         } else {
-            val name = when {
-                title.contains("Java", ignoreCase = true) -> "course_java"
-                title.contains("3D", ignoreCase = true) || title.contains("дженералист", ignoreCase = true) -> "course_3d"
-                else -> "course_x"
-            }
-            val resId = resources.getIdentifier(name, "drawable", requireContext().packageName)
+            val resId = com.courseapp.core.util.ImageUtils.resolveLocalCourseImage(
+                title, resources, requireContext().packageName
+            )
             if (resId != 0) {
                 Glide.with(this).load(resId).transform(CenterCrop()).into(binding.courseImage)
             }
         }
+    }
 
+    private fun loadAuthorAvatar() {
         val avatarResId = resources.getIdentifier("author_merion", "drawable", requireContext().packageName)
         if (avatarResId != 0) {
-            Glide.with(this)
-                .load(avatarResId)
-                .circleCrop()
-                .into(binding.authorAvatar)
-        }
-
-        binding.backButton.setOnClickListener { findNavController().popBackStack() }
-
-        binding.startCourseButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Функция пока недоступна", Toast.LENGTH_SHORT).show()
-        }
-        binding.goToPlatformButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Функция пока недоступна", Toast.LENGTH_SHORT).show()
+            Glide.with(this).load(avatarResId).circleCrop().into(binding.authorAvatar)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    companion object {
+        const val ARG_TITLE = "arg_title"
+        const val ARG_DESCRIPTION = "arg_description"
+        const val ARG_PRICE = "arg_price"
+        const val ARG_RATE = "arg_rate"
+        const val ARG_DATE = "arg_date"
+        const val ARG_IMAGE_URL = "arg_image_url"
+        const val ARG_IS_FAVORITE = "arg_is_favorite"
     }
 }

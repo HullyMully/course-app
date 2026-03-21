@@ -3,37 +3,28 @@ package com.courseapp.login
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.text.InputFilter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import com.courseapp.core.util.ValidationUtils
 import com.courseapp.login.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
 
-    private val emailRegex = Regex("^[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}$")
-
-    private val noCyrillicFilter = InputFilter { source, _, _, _, _, _ ->
-        if (source.any { it in 'а'..'я' || it in 'А'..'Я' || it == 'ё' || it == 'Ё' }) "" else null
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.emailEdit.filters = arrayOf(noCyrillicFilter)
-
+        binding.emailEdit.filters = arrayOf(ValidationUtils.noCyrillicFilter)
         binding.emailEdit.addTextChangedListener { clearErrorsOnType() }
         binding.passwordEdit.addTextChangedListener { clearErrorsOnType() }
         binding.repeatPasswordEdit.addTextChangedListener { clearErrorsOnType() }
 
         binding.registerButton.setOnClickListener { onRegisterClick() }
-
         binding.loginLink.setOnClickListener { finish() }
-
         binding.vkButton.setOnClickListener { openUrl("https://vk.com/") }
         binding.okButton.setOnClickListener { openUrl("https://ok.ru/") }
     }
@@ -43,12 +34,10 @@ class RegisterActivity : AppCompatActivity() {
         val password = binding.passwordEdit.text?.toString().orEmpty()
         val repeat = binding.repeatPasswordEdit.text?.toString().orEmpty()
 
-        if (email.isNotBlank()) {
-            val hasCyrillic = email.any { it in 'а'..'я' || it in 'А'..'Я' || it == 'ё' || it == 'Ё' }
-            val validEmail = emailRegex.matches(email) && !hasCyrillic
-            binding.emailLayout.error = if (!validEmail) getString(R.string.email_error) else null
-        } else {
-            binding.emailLayout.error = null
+        binding.emailLayout.error = when {
+            email.isBlank() -> null
+            !ValidationUtils.isValidEmail(email) -> getString(R.string.email_error)
+            else -> null
         }
 
         if (password.isNotBlank()) binding.repeatPasswordLayout.error = null
@@ -64,26 +53,26 @@ class RegisterActivity : AppCompatActivity() {
         var hasErrors = false
 
         if (email.isBlank()) {
-            binding.emailLayout.error = "Введите email"
+            binding.emailLayout.error = getString(R.string.empty_email_error)
             hasErrors = true
-        } else {
-            val hasCyrillic = email.any { it in 'а'..'я' || it in 'А'..'Я' || it == 'ё' || it == 'Ё' }
-            val validEmail = emailRegex.matches(email) && !hasCyrillic
-            if (!validEmail) {
-                binding.emailLayout.error = getString(R.string.email_error)
-                hasErrors = true
-            }
+        } else if (!ValidationUtils.isValidEmail(email)) {
+            binding.emailLayout.error = getString(R.string.email_error)
+            hasErrors = true
         }
 
-        if (password.isBlank()) {
-            binding.repeatPasswordLayout.error = "Введите пароль"
-            hasErrors = true
-        } else if (repeat.isBlank()) {
-            binding.repeatPasswordLayout.error = "Повторите пароль"
-            hasErrors = true
-        } else if (password != repeat) {
-            binding.repeatPasswordLayout.error = getString(R.string.passwords_mismatch)
-            hasErrors = true
+        when {
+            password.isBlank() -> {
+                binding.repeatPasswordLayout.error = getString(R.string.empty_password_error)
+                hasErrors = true
+            }
+            repeat.isBlank() -> {
+                binding.repeatPasswordLayout.error = getString(R.string.empty_repeat_password_error)
+                hasErrors = true
+            }
+            password != repeat -> {
+                binding.repeatPasswordLayout.error = getString(R.string.passwords_mismatch)
+                hasErrors = true
+            }
         }
 
         if (!hasErrors) {

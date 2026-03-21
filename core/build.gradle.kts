@@ -5,10 +5,7 @@ plugins {
 android {
     namespace = "com.courseapp.core"
     compileSdk = 34
-    defaultConfig {
-        minSdk = 24
-        testOptions.unitTests.isIncludeAndroidResources = true
-    }
+    defaultConfig { minSdk = 24 }
     buildFeatures { viewBinding = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

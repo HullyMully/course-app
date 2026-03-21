@@ -1,7 +1,3 @@
-int drawable bg_rating_badge 0x0
-int drawable ic_favorite_filled 0x0
-int drawable ic_remove 0x0
-int drawable ic_star_green 0x0
 int id date 0x0
 int id description 0x0
 int id favorite_button 0x0
@@ -14,3 +10,4 @@ int id title 0x0
 int layout fragment_favorites 0x0
 int layout item_favorite 0x0
 int string favorites 0x0
+int string more_details 0x0
