@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_error">Неверный формат email (example@mail.com)</string>
+    <string name="email_hint">example@gmail.com</string>
+    <string name="feature_unavailable">Функция пока недоступна</string>
+    <string name="forgot_password">Забыл пароль</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Пароль</string>
+    <string name="label_repeat_password">Повторить пароль</string>
+    <string name="login_action">Войти</string>
+    <string name="login_button">Вход</string>
+    <string name="login_prefix">Уже есть аккаунт?</string>
+    <string name="login_title">Вход</string>
+    <string name="password_hint">Введите пароль</string>
+    <string name="passwords_mismatch">Пароли не совпадают</string>
+    <string name="register_action">Регитрация</string>
+    <string name="register_button">Регистрация</string>
+    <string name="register_link">Нету аккаунта? Регитрация</string>
+    <string name="register_prefix">Нету аккаунта?</string>
+    <string name="register_title">Регистрация</string>
+    <string name="repeat_password_hint">Введите пароль ещё раз</string>
+</resources>

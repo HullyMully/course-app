@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_dest">
+
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.courseapp.home.HomeFragment"
+        android:label="@string/home">
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/course_detail_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/favorites_dest"
+        android:name="com.courseapp.favorites.FavoritesFragment"
+        android:label="@string/favorites">
+        <action
+            android:id="@+id/action_favorites_to_detail"
+            app:destination="@id/course_detail_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/account_dest"
+        android:name="com.courseapp.account.AccountFragment"
+        android:label="@string/account">
+        <action
+            android:id="@+id/action_account_to_detail"
+            app:destination="@id/course_detail_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/course_detail_dest"
+        android:name="com.courseapp.home.CourseDetailFragment"
+        android:label="Курс">
+        <argument
+            android:name="arg_title"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="arg_description"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="arg_price"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="arg_rate"
+            app:argType="string"
+            android:defaultValue="0.0" />
+        <argument
+            android:name="arg_date"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="arg_image_url"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="arg_is_favorite"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+</navigation>

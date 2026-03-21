@@ -1,0 +1,58 @@
+[
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_bottom_nav_color.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/bottom_nav_color.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/layout_activity_main.xml.flat",
+        "source": "com.courseapp-main-56:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.courseapp-main-56:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_ic_nav_account.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/ic_nav_account.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_bg_chip_green.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/bg_chip_green.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.courseapp-main-56:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/layout_activity_onboarding.xml.flat",
+        "source": "com.courseapp-main-56:/layout/activity_onboarding.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_bg_chip_dark.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/bg_chip_dark.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_ic_nav_favorite.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/ic_nav_favorite.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/navigation_nav_graph.xml.flat",
+        "source": "com.courseapp-main-56:/navigation/nav_graph.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/drawable_ic_nav_home.xml.flat",
+        "source": "com.courseapp-main-56:/drawable/ic_nav_home.xml"
+    },
+    {
+        "merged": "com.courseapp-merged_res-54:/menu_bottom_nav_menu.xml.flat",
+        "source": "com.courseapp-main-56:/menu/bottom_nav_menu.xml"
+    }
+]

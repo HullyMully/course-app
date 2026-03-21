@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_dark">#121212</color>
+    <color name="green_accent">#00E676</color>
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <string name="account">Аккаунт</string>
+    <string name="app_name">Тысячи курсов</string>
+    <string name="email_hint">Email</string>
+    <string name="favorites">Избранное</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="home">Главная</string>
+    <string name="login_button">Вход</string>
+    <string name="login_title">Вход</string>
+    <string name="logout">Выйти из аккаунта</string>
+    <string name="more_details">Подробнее</string>
+    <string name="onboarding_continue">Продолжить</string>
+    <string name="onboarding_title">Тысячи курсов\nв одном месте</string>
+    <string name="password_hint">Пароль</string>
+    <string name="profile">Профиль</string>
+    <string name="register_link">Нет аккаунта? Регистрация</string>
+    <string name="search_placeholder">Search courses…</string>
+    <string name="settings">Настройки</string>
+    <string name="sort_by_date">По дате добавления</string>
+    <string name="support">Написать в поддержку</string>
+    <style name="Theme.CourseApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/green_accent</item>
+        <item name="colorPrimaryVariant">@color/green_accent</item>
+        <item name="colorOnPrimary">@android:color/black</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

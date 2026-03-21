@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_unavailable">Функция пока недоступна</string>
+    <string name="lessons_format">%1$d/%2$d уроков</string>
+    <string name="logged_out">Вы вышли из аккаунта</string>
+    <string name="logout">Выйти из аккаунта</string>
+    <string name="profile">Профиль</string>
+    <string name="settings">Настройки</string>
+    <string name="support">Написать в поддержку</string>
+    <string name="your_courses">Ваши курсы</string>
+</resources>

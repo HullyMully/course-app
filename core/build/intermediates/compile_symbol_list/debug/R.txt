@@ -1,0 +1,7 @@
+int color background_dark 0x0
+int color green_accent 0x0
+int color surface_dark 0x0
+int color text_primary 0x0
+int color text_secondary 0x0
+int drawable ic_ok 0x0
+int drawable ic_vk 0x0

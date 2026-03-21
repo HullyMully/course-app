@@ -1,0 +1,8 @@
+com.courseapp.core
+color background_dark
+color green_accent
+color surface_dark
+color text_primary
+color text_secondary
+drawable ic_ok
+drawable ic_vk

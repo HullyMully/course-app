@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+drawable bg_green_dot
+drawable bg_progress_green
+drawable bg_rating_badge
+drawable ic_chevron_right
+drawable ic_star_green
+id courseImage
+id courseTitle
+id coursesRecycler
+id date
+id favoriteIndicator
+id lessonsCount
+id logoutRow
+id progressBar
+id progressText
+id rating
+id settingsRow
+id supportRow
+layout fragment_account
+layout item_profile_course
+string feature_unavailable
+string lessons_format
+string logged_out
+string logout
+string profile
+string settings
+string support
+string your_courses
