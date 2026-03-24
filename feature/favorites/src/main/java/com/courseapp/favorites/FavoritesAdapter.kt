@@ -8,13 +8,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.courseapp.core.util.ImageUtils
-import com.courseapp.data.db.FavoriteEntity
+import com.courseapp.domain.model.Course
 import com.courseapp.favorites.databinding.ItemFavoriteBinding
 
 class FavoritesAdapter(
     private val onRemove: (String) -> Unit,
-    private val onCardClick: (FavoriteEntity) -> Unit
-) : ListAdapter<FavoriteEntity, FavoritesAdapter.VH>(Diff) {
+    private val onCardClick: (Course) -> Unit
+) : ListAdapter<Course, FavoritesAdapter.VH>(Diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val binding = ItemFavoriteBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -28,13 +28,13 @@ class FavoritesAdapter(
     class VH(
         private val binding: ItemFavoriteBinding,
         private val onRemove: (String) -> Unit,
-        private val onCardClick: (FavoriteEntity) -> Unit
+        private val onCardClick: (Course) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: FavoriteEntity) {
+        fun bind(item: Course) {
             val ctx = binding.root.context
             binding.title.text = item.title
-            binding.description.text = item.text
+            binding.description.text = item.description
             binding.description.maxLines = 2
             binding.price.text = "${item.price} ₽"
             binding.rating.text = "${item.rate}"
@@ -60,8 +60,8 @@ class FavoritesAdapter(
         }
     }
 
-    object Diff : DiffUtil.ItemCallback<FavoriteEntity>() {
-        override fun areItemsTheSame(a: FavoriteEntity, b: FavoriteEntity) = a.id == b.id
-        override fun areContentsTheSame(a: FavoriteEntity, b: FavoriteEntity) = a == b
+    object Diff : DiffUtil.ItemCallback<Course>() {
+        override fun areItemsTheSame(a: Course, b: Course) = a.id == b.id
+        override fun areContentsTheSame(a: Course, b: Course) = a == b
     }
 }

@@ -2,6 +2,7 @@ package com.courseapp
 
 import android.app.Application
 import com.courseapp.account.di.accountModule
+import com.courseapp.domain.di.domainModule
 import com.courseapp.favorites.di.favoritesModule
 import com.courseapp.home.di.homeModule
 import org.koin.android.ext.koin.androidContext
@@ -12,7 +13,7 @@ class CourseApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@CourseApp)
-            modules(com.courseapp.data.di.dataModule, homeModule, favoritesModule, accountModule)
+            modules(com.courseapp.data.di.dataModule, domainModule, homeModule, favoritesModule, accountModule)
         }
     }
 }

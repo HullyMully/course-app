@@ -32,13 +32,13 @@ import kotlinx.coroutines.flow.Flow;
 public final class FavoritesDao_Impl implements FavoritesDao {
   private final RoomDatabase __db;
 
-  private final EntityInsertionAdapter<FavoriteEntity> __insertionAdapterOfFavoriteEntity;
+  private final EntityInsertionAdapter<CourseEntity> __insertionAdapterOfCourseEntity;
 
   private final SharedSQLiteStatement __preparedStmtOfRemove;
 
   public FavoritesDao_Impl(@NonNull final RoomDatabase __db) {
     this.__db = __db;
-    this.__insertionAdapterOfFavoriteEntity = new EntityInsertionAdapter<FavoriteEntity>(__db) {
+    this.__insertionAdapterOfCourseEntity = new EntityInsertionAdapter<CourseEntity>(__db) {
       @Override
       @NonNull
       protected String createQuery() {
@@ -47,7 +47,7 @@ public final class FavoritesDao_Impl implements FavoritesDao {
 
       @Override
       protected void bind(@NonNull final SupportSQLiteStatement statement,
-          @NonNull final FavoriteEntity entity) {
+          @NonNull final CourseEntity entity) {
         statement.bindString(1, entity.getId());
         statement.bindString(2, entity.getTitle());
         statement.bindString(3, entity.getText());
@@ -73,14 +73,14 @@ public final class FavoritesDao_Impl implements FavoritesDao {
   }
 
   @Override
-  public Object insert(final FavoriteEntity entity, final Continuation<? super Unit> $completion) {
+  public Object insert(final CourseEntity entity, final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       @NonNull
       public Unit call() throws Exception {
         __db.beginTransaction();
         try {
-          __insertionAdapterOfFavoriteEntity.insert(entity);
+          __insertionAdapterOfCourseEntity.insert(entity);
           __db.setTransactionSuccessful();
           return Unit.INSTANCE;
         } finally {
@@ -116,13 +116,13 @@ public final class FavoritesDao_Impl implements FavoritesDao {
   }
 
   @Override
-  public Flow<List<FavoriteEntity>> getAllFlow() {
+  public Flow<List<CourseEntity>> getAllFlow() {
     final String _sql = "SELECT * FROM favorites ORDER BY publishDate DESC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    return CoroutinesRoom.createFlow(__db, false, new String[] {"favorites"}, new Callable<List<FavoriteEntity>>() {
+    return CoroutinesRoom.createFlow(__db, false, new String[] {"favorites"}, new Callable<List<CourseEntity>>() {
       @Override
       @NonNull
-      public List<FavoriteEntity> call() throws Exception {
+      public List<CourseEntity> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
@@ -133,9 +133,9 @@ public final class FavoritesDao_Impl implements FavoritesDao {
           final int _cursorIndexOfStartDate = CursorUtil.getColumnIndexOrThrow(_cursor, "startDate");
           final int _cursorIndexOfPublishDate = CursorUtil.getColumnIndexOrThrow(_cursor, "publishDate");
           final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "imageUrl");
-          final List<FavoriteEntity> _result = new ArrayList<FavoriteEntity>(_cursor.getCount());
+          final List<CourseEntity> _result = new ArrayList<CourseEntity>(_cursor.getCount());
           while (_cursor.moveToNext()) {
-            final FavoriteEntity _item;
+            final CourseEntity _item;
             final String _tmpId;
             _tmpId = _cursor.getString(_cursorIndexOfId);
             final String _tmpTitle;
@@ -156,7 +156,7 @@ public final class FavoritesDao_Impl implements FavoritesDao {
             } else {
               _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
             }
-            _item = new FavoriteEntity(_tmpId,_tmpTitle,_tmpText,_tmpPrice,_tmpRate,_tmpStartDate,_tmpPublishDate,_tmpImageUrl);
+            _item = new CourseEntity(_tmpId,_tmpTitle,_tmpText,_tmpPrice,_tmpRate,_tmpStartDate,_tmpPublishDate,_tmpImageUrl);
             _result.add(_item);
           }
           return _result;
@@ -173,14 +173,14 @@ public final class FavoritesDao_Impl implements FavoritesDao {
   }
 
   @Override
-  public Object getAll(final Continuation<? super List<FavoriteEntity>> $completion) {
+  public Object getAll(final Continuation<? super List<CourseEntity>> $completion) {
     final String _sql = "SELECT * FROM favorites ORDER BY publishDate DESC";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
-    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<FavoriteEntity>>() {
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<CourseEntity>>() {
       @Override
       @NonNull
-      public List<FavoriteEntity> call() throws Exception {
+      public List<CourseEntity> call() throws Exception {
         final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
         try {
           final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
@@ -191,9 +191,9 @@ public final class FavoritesDao_Impl implements FavoritesDao {
           final int _cursorIndexOfStartDate = CursorUtil.getColumnIndexOrThrow(_cursor, "startDate");
           final int _cursorIndexOfPublishDate = CursorUtil.getColumnIndexOrThrow(_cursor, "publishDate");
           final int _cursorIndexOfImageUrl = CursorUtil.getColumnIndexOrThrow(_cursor, "imageUrl");
-          final List<FavoriteEntity> _result = new ArrayList<FavoriteEntity>(_cursor.getCount());
+          final List<CourseEntity> _result = new ArrayList<CourseEntity>(_cursor.getCount());
           while (_cursor.moveToNext()) {
-            final FavoriteEntity _item;
+            final CourseEntity _item;
             final String _tmpId;
             _tmpId = _cursor.getString(_cursorIndexOfId);
             final String _tmpTitle;
@@ -214,7 +214,7 @@ public final class FavoritesDao_Impl implements FavoritesDao {
             } else {
               _tmpImageUrl = _cursor.getString(_cursorIndexOfImageUrl);
             }
-            _item = new FavoriteEntity(_tmpId,_tmpTitle,_tmpText,_tmpPrice,_tmpRate,_tmpStartDate,_tmpPublishDate,_tmpImageUrl);
+            _item = new CourseEntity(_tmpId,_tmpTitle,_tmpText,_tmpPrice,_tmpRate,_tmpStartDate,_tmpPublishDate,_tmpImageUrl);
             _result.add(_item);
           }
           return _result;
@@ -248,6 +248,32 @@ public final class FavoritesDao_Impl implements FavoritesDao {
             }
           } else {
             _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Object getFavoriteIds(final Continuation<? super List<String>> $completion) {
+    final String _sql = "SELECT id FROM favorites";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<List<String>>() {
+      @Override
+      @NonNull
+      public List<String> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final List<String> _result = new ArrayList<String>(_cursor.getCount());
+          while (_cursor.moveToNext()) {
+            final String _item;
+            _item = _cursor.getString(0);
+            _result.add(_item);
           }
           return _result;
         } finally {

@@ -12,7 +12,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.courseapp.account.databinding.FragmentAccountBinding
-import com.courseapp.data.db.FavoriteEntity
+import com.courseapp.domain.model.Course
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -62,10 +62,10 @@ class AccountFragment : Fragment() {
         }
     }
 
-    private fun openCourseDetail(item: FavoriteEntity) {
+    private fun openCourseDetail(item: Course) {
         val bundle = bundleOf(
             "arg_title" to item.title,
-            "arg_description" to item.text,
+            "arg_description" to item.description,
             "arg_price" to item.price,
             "arg_rate" to "${item.rate}",
             "arg_date" to item.publishDate,

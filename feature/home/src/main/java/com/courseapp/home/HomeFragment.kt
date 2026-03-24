@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.courseapp.domain.model.Course
 import com.courseapp.home.databinding.FragmentHomeBinding
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -50,14 +51,14 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun openCourseDetail(item: CourseItem) {
+    private fun openCourseDetail(item: Course) {
         val bundle = bundleOf(
-            CourseDetailFragment.ARG_TITLE to item.dto.title,
-            CourseDetailFragment.ARG_DESCRIPTION to item.dto.text,
-            CourseDetailFragment.ARG_PRICE to item.dto.price,
-            CourseDetailFragment.ARG_RATE to "${item.dto.rate}",
-            CourseDetailFragment.ARG_DATE to item.dto.publishDate,
-            CourseDetailFragment.ARG_IMAGE_URL to item.dto.imageUrl,
+            CourseDetailFragment.ARG_TITLE to item.title,
+            CourseDetailFragment.ARG_DESCRIPTION to item.description,
+            CourseDetailFragment.ARG_PRICE to item.price,
+            CourseDetailFragment.ARG_RATE to "${item.rate}",
+            CourseDetailFragment.ARG_DATE to item.publishDate,
+            CourseDetailFragment.ARG_IMAGE_URL to item.imageUrl,
             CourseDetailFragment.ARG_IS_FAVORITE to item.isFavorite
         )
         findNavController().navigate(

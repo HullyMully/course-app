@@ -1,12 +1,12 @@
 package com.courseapp.account
 
 import androidx.lifecycle.ViewModel
-import com.courseapp.data.db.FavoriteEntity
-import com.courseapp.data.repository.CoursesRepository
+import com.courseapp.domain.model.Course
+import com.courseapp.domain.usecase.GetFavoritesUseCase
 import kotlinx.coroutines.flow.Flow
 
 class AccountViewModel(
-    private val repository: CoursesRepository
+    getFavoritesUseCase: GetFavoritesUseCase
 ) : ViewModel() {
-    val courses: Flow<List<FavoriteEntity>> = repository.getFavorites()
+    val courses: Flow<List<Course>> = getFavoritesUseCase()
 }

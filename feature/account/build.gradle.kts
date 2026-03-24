@@ -15,7 +15,7 @@ android {
 }
 dependencies {
     implementation(project(":core"))
-    implementation(project(":data"))
+    implementation(project(":core:domain"))
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")

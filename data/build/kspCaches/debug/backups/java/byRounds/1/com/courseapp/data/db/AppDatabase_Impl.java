@@ -99,7 +99,7 @@ public final class AppDatabase_Impl extends AppDatabase {
         final TableInfo _infoFavorites = new TableInfo("favorites", _columnsFavorites, _foreignKeysFavorites, _indicesFavorites);
         final TableInfo _existingFavorites = TableInfo.read(db, "favorites");
         if (!_infoFavorites.equals(_existingFavorites)) {
-          return new RoomOpenHelper.ValidationResult(false, "favorites(com.courseapp.data.db.FavoriteEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "favorites(com.courseapp.data.db.CourseEntity).\n"
                   + " Expected:\n" + _infoFavorites + "\n"
                   + " Found:\n" + _existingFavorites);
         }

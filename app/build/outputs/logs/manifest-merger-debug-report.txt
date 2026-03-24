@@ -4,11 +4,11 @@ ADDED from /Users/hullymully/Documents/development/Projects/course-app/app/src/m
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml:2:1-36:12
+MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:feature:home] /Users/hullymully/Documents/development/Projects/course-app/feature/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:feature:favorites] /Users/hullymully/Documents/development/Projects/course-app/feature/favorites/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:feature:account] /Users/hullymully/Documents/development/Projects/course-app/feature/account/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:core] /Users/hullymully/Documents/development/Projects/course-app/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.2] /Users/hullymully/.gradle/caches/8.13/transforms/0abb3060d1a43c0e7e4a2c0dbebd2fb8/transformed/adapterdelegates4-kotlin-dsl-viewbinding-4.3.2/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:8.2.0] /Users/hullymully/.gradle/caches/8.13/transforms/152b23811f7a42481517ea3459d0ee94/transformed/viewbinding-8.2.0/AndroidManifest.xml:2:1-7:12
@@ -182,16 +182,16 @@ uses-sdk
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml
 INJECTED from /Users/hullymully/Documents/development/Projects/course-app/app/src/main/AndroidManifest.xml
+MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:home] /Users/hullymully/Documents/development/Projects/course-app/feature/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:home] /Users/hullymully/Documents/development/Projects/course-app/feature/home/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:favorites] /Users/hullymully/Documents/development/Projects/course-app/feature/favorites/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:favorites] /Users/hullymully/Documents/development/Projects/course-app/feature/favorites/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:account] /Users/hullymully/Documents/development/Projects/course-app/feature/account/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:feature:account] /Users/hullymully/Documents/development/Projects/course-app/feature/account/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:data] /Users/hullymully/Documents/development/Projects/course-app/data/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:feature:login] /Users/hullymully/Documents/development/Projects/course-app/feature/login/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:core] /Users/hullymully/Documents/development/Projects/course-app/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:core] /Users/hullymully/Documents/development/Projects/course-app/core/build/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:4.3.2] /Users/hullymully/.gradle/caches/8.13/transforms/0abb3060d1a43c0e7e4a2c0dbebd2fb8/transformed/adapterdelegates4-kotlin-dsl-viewbinding-4.3.2/AndroidManifest.xml:5:5-7:41

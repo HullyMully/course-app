@@ -1,39 +1,34 @@
 package com.courseapp.data.repository
 
-import com.courseapp.data.api.CourseDto
 import com.courseapp.data.api.CoursesApi
-import com.courseapp.data.db.FavoriteEntity
 import com.courseapp.data.db.FavoritesDao
+import com.courseapp.data.mapper.toDomain
+import com.courseapp.data.mapper.toEntity
+import com.courseapp.domain.model.Course
+import com.courseapp.domain.repository.CoursesRepository
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
-class CoursesRepository(
+class CoursesRepositoryImpl(
     private val api: CoursesApi,
     private val favoritesDao: FavoritesDao
-) {
-    suspend fun loadCourses(): Result<List<CourseDto>> = runCatching {
-        api.getCourses().courses
+) : CoursesRepository {
+    override suspend fun getCourses(): Result<List<Course>> = runCatching {
+        val favoriteIds = favoritesDao.getFavoriteIds().toSet()
+        api.getCourses().courses.map { dto ->
+            dto.toDomain(isFavorite = dto.hasLike || dto.id in favoriteIds)
+        }
     }
 
-    suspend fun isFavorite(id: String): Boolean = favoritesDao.isFavorite(id) != null
-
-    suspend fun addToFavorites(dto: CourseDto) {
-        favoritesDao.insert(
-            FavoriteEntity(
-                id = dto.id,
-                title = dto.title,
-                text = dto.text,
-                price = dto.price,
-                rate = dto.rate,
-                startDate = dto.startDate,
-                publishDate = dto.publishDate,
-                imageUrl = dto.imageUrl
-            )
-        )
+    override suspend fun addToFavorites(course: Course) {
+        favoritesDao.insert(course.toEntity())
     }
 
-    suspend fun removeFromFavorites(id: String) {
-        favoritesDao.remove(id)
+    override suspend fun removeFromFavorites(courseId: String) {
+        favoritesDao.remove(courseId)
     }
 
-    fun getFavorites(): Flow<List<FavoriteEntity>> = favoritesDao.getAllFlow()
+    override fun observeFavoriteCourses(): Flow<List<Course>> {
+        return favoritesDao.getAllFlow().map { entities -> entities.map { it.toDomain() } }
+    }
 }

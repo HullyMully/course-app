@@ -1,36 +1,27 @@
 package com.courseapp.home
 
-import androidx.recyclerview.widget.DiffUtil
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.courseapp.data.api.CourseDto
-import com.courseapp.data.repository.CoursesRepository
+import com.courseapp.domain.model.Course
+import com.courseapp.domain.usecase.GetCoursesUseCase
+import com.courseapp.domain.usecase.SortCoursesByPublishDateUseCase
+import com.courseapp.domain.usecase.ToggleFavoriteUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 
-data class CourseItem(
-    val dto: CourseDto,
-    val isFavorite: Boolean
-) {
-    companion object {
-        val DIFF = object : DiffUtil.ItemCallback<CourseItem>() {
-            override fun areItemsTheSame(old: CourseItem, new: CourseItem) = old.dto.id == new.dto.id
-            override fun areContentsTheSame(old: CourseItem, new: CourseItem) = old == new
-        }
-    }
-}
-
 data class HomeState(
-    val courses: List<CourseItem> = emptyList(),
+    val courses: List<Course> = emptyList(),
     val sortByDateDesc: Boolean = true,
     val loading: Boolean = false,
     val error: String? = null
 )
 
 class HomeViewModel(
-    private val repository: CoursesRepository
+    private val getCoursesUseCase: GetCoursesUseCase,
+    private val toggleFavoriteUseCase: ToggleFavoriteUseCase,
+    private val sortCoursesByPublishDateUseCase: SortCoursesByPublishDateUseCase
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(HomeState())
@@ -43,16 +34,10 @@ class HomeViewModel(
     fun loadCourses() {
         viewModelScope.launch {
             _state.value = _state.value.copy(loading = true, error = null)
-            repository.loadCourses()
+            getCoursesUseCase()
                 .onSuccess { list ->
-                    val favoriteIds = buildSet {
-                        for (dto in list) if (repository.isFavorite(dto.id)) add(dto.id)
-                    }
-                    val items = list.map { dto ->
-                        CourseItem(dto, dto.hasLike || dto.id in favoriteIds)
-                    }
                     _state.value = _state.value.copy(
-                        courses = sortByPublishDate(items, desc = true),
+                        courses = sortByPublishDate(list, desc = true),
                         loading = false
                     )
                 }
@@ -73,22 +58,16 @@ class HomeViewModel(
         )
     }
 
-    private fun sortByPublishDate(items: List<CourseItem>, desc: Boolean): List<CourseItem> {
-        return if (desc) items.sortedByDescending { it.dto.publishDate }
-        else items.sortedBy { it.dto.publishDate }
+    private fun sortByPublishDate(items: List<Course>, desc: Boolean): List<Course> {
+        return sortCoursesByPublishDateUseCase(items, desc)
     }
 
-    fun toggleFavorite(item: CourseItem) {
+    fun toggleFavorite(item: Course) {
         viewModelScope.launch {
-            val dto = item.dto
-            if (item.isFavorite) {
-                repository.removeFromFavorites(dto.id)
-            } else {
-                repository.addToFavorites(dto)
-            }
+            val updatedCourse = toggleFavoriteUseCase(item)
             _state.value = _state.value.copy(
                 courses = _state.value.courses.map {
-                    if (it.dto.id == dto.id) it.copy(isFavorite = !it.isFavorite)
+                    if (it.id == updatedCourse.id) updatedCourse
                     else it
                 }
             )

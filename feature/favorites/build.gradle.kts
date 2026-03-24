@@ -15,7 +15,7 @@ android {
 }
 dependencies {
     implementation(project(":core"))
-    implementation(project(":data"))
+    implementation(project(":core:domain"))
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")

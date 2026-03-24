@@ -6,9 +6,12 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.ViewModelProvider
 import com.courseapp.core.util.ValidationUtils
 import com.courseapp.login.databinding.ActivityLoginBinding
+import kotlinx.coroutines.launch
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,13 +29,20 @@ class LoginActivity : AppCompatActivity() {
         binding.emailEdit.addTextChangedListener { updateValidation() }
         binding.passwordEdit.addTextChangedListener { updateValidation() }
 
-        viewModel.emailError.observe(this) { binding.emailLayout.error = it }
-        viewModel.passwordError.observe(this) { binding.passwordLayout.error = it }
-        viewModel.navigateToHome.observe(this) { shouldNavigate ->
-            if (shouldNavigate == true) {
-                startActivity(Intent(this, Class.forName("com.courseapp.MainActivity")))
-                finish()
-                viewModel.onNavigateHandled()
+        lifecycleScope.launch {
+            repeatOnLifecycle(androidx.lifecycle.Lifecycle.State.STARTED) {
+                launch {
+                    viewModel.uiState.collect { state ->
+                        binding.emailLayout.error = state.emailErrorRes?.let(::getString)
+                        binding.passwordLayout.error = state.passwordErrorRes?.let(::getString)
+                    }
+                }
+                launch {
+                    viewModel.navigateToHome.collect {
+                        startActivity(Intent(this@LoginActivity, Class.forName("com.courseapp.MainActivity")))
+                        finish()
+                    }
+                }
             }
         }
 

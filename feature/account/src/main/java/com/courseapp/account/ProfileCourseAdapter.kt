@@ -8,12 +8,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.courseapp.core.util.ImageUtils
-import com.courseapp.data.db.FavoriteEntity
+import com.courseapp.domain.model.Course
 import com.courseapp.account.databinding.ItemProfileCourseBinding
 
 class ProfileCourseAdapter(
-    private val onCardClick: (FavoriteEntity) -> Unit
-) : ListAdapter<FavoriteEntity, ProfileCourseAdapter.VH>(Diff) {
+    private val onCardClick: (Course) -> Unit
+) : ListAdapter<Course, ProfileCourseAdapter.VH>(Diff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
         val binding = ItemProfileCourseBinding.inflate(LayoutInflater.from(parent.context), parent, false)
@@ -26,10 +26,10 @@ class ProfileCourseAdapter(
 
     class VH(
         private val binding: ItemProfileCourseBinding,
-        private val onCardClick: (FavoriteEntity) -> Unit
+        private val onCardClick: (Course) -> Unit
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: FavoriteEntity) {
+        fun bind(item: Course) {
             val ctx = binding.root.context
             binding.courseTitle.text = item.title
             binding.rating.text = "${item.rate}"
@@ -73,8 +73,8 @@ class ProfileCourseAdapter(
         }
     }
 
-    object Diff : DiffUtil.ItemCallback<FavoriteEntity>() {
-        override fun areItemsTheSame(a: FavoriteEntity, b: FavoriteEntity) = a.id == b.id
-        override fun areContentsTheSame(a: FavoriteEntity, b: FavoriteEntity) = a == b
+    object Diff : DiffUtil.ItemCallback<Course>() {
+        override fun areItemsTheSame(a: Course, b: Course) = a.id == b.id
+        override fun areContentsTheSame(a: Course, b: Course) = a == b
     }
 }

@@ -15,6 +15,7 @@ dependencyResolutionManagement {
 rootProject.name = "CourseApp"
 include(":app")
 include(":core")
+include(":core:domain")
 include(":data")
 include(":feature:login")
 include(":feature:home")
