@@ -1,0 +1,4 @@
+#Tue Mar 24 20:12:34 OMST 2026
+base.0=/Users/hullymully/Documents/development/Projects/course-app/app/build/intermediates/dex/debugAndroidTest/mergeProjectDexDebugAndroidTest/0/classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

@@ -35,6 +35,7 @@ int string author_default 0x0
 int string author_label 0x0
 int string back 0x0
 int string favorite 0x0
+int string favorites 0x0
 int string feature_unavailable 0x0
 int string filter 0x0
 int string go_to_platform 0x0

@@ -37,6 +37,7 @@ string author_default
 string author_label
 string back
 string favorite
+string favorites
 string feature_unavailable
 string filter
 string go_to_platform

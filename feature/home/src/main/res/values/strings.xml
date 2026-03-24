@@ -11,6 +11,7 @@
     <string name="about_course">О курсе</string>
     <string name="back">Назад</string>
     <string name="filter">Фильтр</string>
-    <string name="favorite">Избранное</string>
+    <string name="favorites">Избранное</string>
+    <string name="favorite">В избранное</string>
     <string name="feature_unavailable">Функция пока недоступна</string>
 </resources>

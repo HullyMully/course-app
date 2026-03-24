@@ -1,0 +1,4 @@
+com.courseapp.test.app-androidTest-0 /Users/hullymully/Documents/development/Projects/course-app/app/build/generated/res/resValues/androidTest/debug
+com.courseapp.test.app-mergeDebugAndroidTestResources-1 /Users/hullymully/Documents/development/Projects/course-app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.courseapp.test.app-mergeDebugAndroidTestResources-2 /Users/hullymully/Documents/development/Projects/course-app/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.courseapp.test.app-merged_res-3 /Users/hullymully/Documents/development/Projects/course-app/app/build/intermediates/merged_res/debugAndroidTest

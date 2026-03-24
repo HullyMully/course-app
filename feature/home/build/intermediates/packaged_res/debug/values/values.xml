@@ -4,7 +4,8 @@
     <string name="author_default">Merion Academy</string>
     <string name="author_label">Автор</string>
     <string name="back">Назад</string>
-    <string name="favorite">Избранное</string>
+    <string name="favorite">В избранное</string>
+    <string name="favorites">Избранное</string>
     <string name="feature_unavailable">Функция пока недоступна</string>
     <string name="filter">Фильтр</string>
     <string name="go_to_platform">Перейти на платформу</string>

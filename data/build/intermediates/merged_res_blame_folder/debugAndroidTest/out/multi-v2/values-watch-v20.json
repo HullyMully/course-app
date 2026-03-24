@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.courseapp.data.test.data-mergeDebugAndroidTestResources-39:/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/Users/hullymully/.gradle/caches/8.13/transforms/45782928471e6f6c49edb694386be746/transformed/appcompat-1.6.1/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

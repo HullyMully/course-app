@@ -2024,7 +2024,7 @@
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
-    <string name="favorite">Избранное</string>
+    <string name="favorite">В избранное</string>
     <string name="favorites">Избранное</string>
     <string name="feature_unavailable">Функция пока недоступна</string>
     <string name="filter">Фильтр</string>
